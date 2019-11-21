@@ -84,7 +84,7 @@ RUN yum upgrade -y \
 
 COPY --from=builder /fluent-bit /fluent-bit
 COPY --from=aws-fluent-bit-plugins:latest /go/src/github.com/aws/amazon-kinesis-firehose-for-fluent-bit/bin/firehose.so /fluent-bit/firehose.so
-COPY --from=aws-fluent-bit-plugins:latest /go/src/github.com/aws/amazon-kinesis-streams-for-fluent-bit/bin/kinesis.so /fluent-bit/kinesis.s
+COPY --from=aws-fluent-bit-plugins:latest /go/src/github.com/aws/amazon-kinesis-streams-for-fluent-bit/bin/kinesis.so /fluent-bit/kinesis.so
 COPY --from=aws-fluent-bit-plugins:latest /go/src/github.com/aws/amazon-cloudwatch-logs-for-fluent-bit/bin/cloudwatch.so /fluent-bit/cloudwatch.so
 RUN mkdir -p /fluent-bit/licenses/fluent-bit
 RUN mkdir -p /fluent-bit/licenses/firehose
