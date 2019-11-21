@@ -96,7 +96,7 @@ COPY --from=aws-fluent-bit-plugins:latest /go/src/github.com/aws/amazon-kinesis-
     /fluent-bit/licenses/firehose/
 COPY --from=aws-fluent-bit-plugins:latest /go/src/github.com/aws/amazon-kinesis-streams-for-fluent-bit/THIRD-PARTY \
   /go/src/github.com/aws/amazon-kinesis-streams-for-fluent-bit/LICENSE \
-  /fluent-bit/licenses/kinesis
+  /fluent-bit/licenses/kinesis/
 COPY --from=aws-fluent-bit-plugins:latest /go/src/github.com/aws/amazon-cloudwatch-logs-for-fluent-bit/THIRD-PARTY \
     /go/src/github.com/aws/amazon-cloudwatch-logs-for-fluent-bit/LICENSE \
     /fluent-bit/licenses/cloudwatch/
